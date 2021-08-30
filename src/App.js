@@ -30,26 +30,34 @@ function App() {
       {/* Define Routes to different components based on URL */}
 
       <Switch>
+        {/* route for dislaying our homepage that loads the Welcome component */}
         <Route
           exact
           path="/"
           component={Welcome}
         />
+        {/* route for listing all students that loads the StudentList component */}
         <Route
           exact
           path="/students"
           component={StudentList}
         />
+        {/* 
+        route for displaying a single by the id passed in the URL.
+        This route loads the CreateStudent component 
+        */}
         <Route
           exact
           path="/student/:id"
           component={Student}
         />
+        {/* route for creating a student that loads the CreateStudent component */}
         <Route
           exact
           path="/create/student"
           component={CreateStudent}
         />
+        {/* route for displaying a NoMatch (404) compnenent when no route is matched */}
         <Route
           path="*"
           component={NoMatch}
